@@ -1,6 +1,9 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import { GoogleGenAI } from "@google/genai";
 import readlineSync from "readline-sync";
-const API_KEY = "AIzaSyA7MlIoqZMiF-6lihZU15_fm9zKDSRE3xA";
+const API_KEY = process.env.GEMINI_API_KEY;
 
 const ai = new GoogleGenAI({ apiKey: API_KEY });
 const History = [];
